@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+‎<html lang="id">
+‎<head>
+‎  <meta charset="UTF-8">
+‎  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+‎  <title>Grosir sweater rajut | Official Store</title>
+‎  <link href="https://fonts.googleapis.com/css2?family=Helvetica:wght@300;400;700&display=swap" rel="stylesheet">
+‎  <style>
+‎    :root { --bg:#ffffff; --text:#111; --muted:#666; --line:#e5e5e5; --accent:#FF5722; --wa:#25D366; }
+‎    * { margin:0; padding:0; box-sizing:border-box; }
+‎    html { scroll-behavior: smooth; }
+‎    body { font-family:'Helvetica', Arial, sans-serif; background:var(--bg); color:var(--text); }
+‎    
+‎    /* BACKGROUND GAMBAR TRANSPARAN */
+‎    body::before {
+‎      content: "";
+‎      position: fixed;
+‎      top: 0; left: 0;
+‎      width: 100%; height: 100%;
+‎      background-image: url('https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1600'); /* GANTI GAMBAR BG KAMU */
+‎      background-size: cover;
+‎      background-position: center;
+‎      background-attachment: fixed;
+‎      opacity: 0.04; /* Transparan banget */
+‎      z-index: -1;
+‎    }
+‎
+‎    /* NAVBAR STYLE UNIQLO */
+‎    .nav { background:#fff; border-bottom:1px solid var(--line); padding:16px 20px; position:sticky; top:0; z-index:900; }
+‎    .nav-wrap { max-width:1200px; margin:auto; display:flex; justify-content:space-between; align-items:center; }
+‎    .logo { font-size:20px; font-weight:700; letter-spacing:1px; }
+‎    .nav-btn { background:#000; color:#fff; padding:8px 16px; border-radius:4px; text-decoration:none; font-size:13px; font-weight:700; }
+‎
+‎    /* HERO VIDEO HEADER */
+‎    .hero-video { position:relative; height:60vh; min-height:400px; overflow:hidden; display:flex; align-items:center; justify-content:center; text-align:center; color:#fff; }
+‎    .hero-video video { position:absolute; top:50%; left:50%; min-width:100%; min-height:100%; transform:translate(-50%,-50%); z-index:-1; object-fit:cover; }
+‎    .hero-overlay { position:absolute; inset:0; background:rgba(0,0,0,0.5); z-index:0; }
+‎    .hero-content { position:relative; z-index:1; padding:20px; }
+‎    .hero-content h1 { font-size:40px; font-weight:700; margin-bottom:12px; }
+‎    .hero-content p { font-size:16px; max-width:600px; margin:auto; opacity:0.9; }
+‎
+‎    .container { max-width:1200px; margin:auto; padding:50px 20px; }
+‎    .section-title { font-size:24px; font-weight:700; margin-bottom:24px; text-align:center; }
+‎
+‎    /* GRID PRODUK 10 FOTO */
+‎    .grid-prod { display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:20px; }
+‎    .prod-card { background:#fff; border:1px solid var(--line); transition:0.3s; }
+‎    .prod-card:hover { box-shadow:0 4px 16px rgba(0,0,0,0.08); }
+‎    .prod-card img { width:100%; height:280px; object-fit:cover; display:block; }
+‎    .prod-body { padding:16px; }
+‎    .prod-body h3 { font-size:14px; font-weight:400; margin-bottom:6px; }
+‎    .prod-body .price { font-size:14px; font-weight:700; margin-bottom:12px; }
+‎    .btn-shopee { display:block; width:100%; background:var(--accent); color:#fff; text-align:center; padding:10px; border-radius:4px; text-decoration:none; font-size:13px; font-weight:700; }
+‎
+‎    /* GRID VIDEO 4 KOLOM */
+‎    .grid-video { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:20px; margin-top:30px; }
+‎    .video-card video { width:100%; border-radius:4px; display:block; }
+‎    .video-card a { display:block; margin-top:10px; font-size:13px; text-decoration:none; color:var(--accent); font-weight:700; }
+‎
+‎    /* FOOTER STYLE UNIQLO */
+‎    .footer { background:#f5f5f5; border-top:1px solid var(--line); padding:40px 20px; margin-top:60px; font-size:13px; color:var(--muted); }
+‎    .footer-wrap { max-width:1200px; margin:auto; display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:30px; }
+‎    .footer h4 { font-size:14px; color:#000; margin-bottom:12px; font-weight:700; }
+‎    .footer a { display:block; color:var(--muted); text-decoration:none; margin-bottom:8px; }
+‎    .footer-bottom { text-align:center; padding-top:30px; border-top:1px solid var(--line); margin-top:30px; }
+‎
+‎    /* TOMBOL WA MELAYANG */
+‎    .wa-float { position:fixed; bottom:20px; right:20px; background:var(--wa); color:#fff; width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:30px; text-decoration:none; box-shadow:0 4px 16px rgba(0,0,0,0.2); z-index:999; }
+‎
+‎    @media(max-width:600px){ .hero-content h1{font-size:28px;} .grid-prod{grid-template-columns:1fr 1fr;} }
+‎  </style>
+‎</head>
+‎<body>
+‎
+‎  <!-- NAVBAR -->
+‎  <nav class="nav">
+‎    <div class="nav-wrap">
+‎      <div class="logo">STARLA BORDIR</div>
+‎      <a href="https://shopee.co.id/ISI-LINK-SHOPEE-UTAMA-KAMU" target="_blank" class="nav-btn">OFFICIAL SHOPEE</a>
+‎    </div>
+‎  </nav>
+‎
+‎  <!-- HERO VIDEO HEADER -->
+‎  <section class="hero-video">
+‎    <video autoplay muted loop playsinline>
+‎      <source src="ISI-LINK-VIDEO-HEADER-KAMU.mp4" type="video/mp4">
+‎    </video>
+‎    <div class="hero-overlay"></div>
+‎    <div class="hero-content">
+‎      <h1>STARLA BORDIR</h1>
+‎      <p>Selamat datang di Official Store Starla Bordir. Spesialis Grosir Sweater Rajut & Cardigan Kualitas Ekspor dari Majalaya, Bandung.</p>
+‎    </div>
+‎  </section>
+‎
+‎  <!-- KATALOG 10 PRODUK -->
+‎  <section class="container">
+‎    <h2 class="section-title">KOLEKSI TERBARU</h2>
+‎    <div class="grid-prod">
+‎      
+‎      <!-- COPY-PASTE BLOK INI SAMPE 10 KALI -->
+‎      <div class="prod-card">
+‎        <img src="ISI-LINK-FOTO-PRODUK-1.jpg" alt="Produk 1">
+‎        <div class="prod-body">
+‎          <h3>Nama Produk 1</h3>
+‎          <div class="price">Rp0</div>
+‎          <a href="ISI-LINK-SHOPEE-PRODUK-1" target="_blank" class="btn-shopee">BELI DI SHOPEE</a>
+‎        </div>
+‎      </div>
+‎
+‎      <div class="prod-card">
+‎        <img src="ISI-LINK-FOTO-PRODUK-2.jpg" alt="Produk 2">
+‎        <div class="prod-body">
+‎          <h3>Nama Produk 2</h3>
+‎          <div class="price">Rp0</div>
+‎          <a href="ISI-LINK-SHOPEE-PRODUK-2" target="_blank" class="btn-shopee">BELI DI SHOPEE</a>
+‎        </div>
+‎      </div>
+‎
+‎      <div class="prod-card">
+‎        <img src="ISI-LINK-FOTO-PRODUK-3.jpg" alt="Produk 3">
+‎        <div class="prod-body">
+‎          <h3>Nama Produk 3</h3>
+‎          <div class="price">Rp0</div>
+‎          <a href="ISI-LINK-SHOPEE-PRODUK-3" target="_blank" class="btn-shopee">BELI DI SHOPEE</a>
+‎        </div>
+‎      </div>
+‎
+‎      <div class="prod-card">
+‎        <img src="ISI-LINK-FOTO-PRODUK-4.jpg" alt="Produk 4">
+‎        <div class="prod-body">
+‎          <h3>Nama Produk 4</h3>
+‎          <div class="price">Rp0</div>
+‎          <a href="ISI-LINK-SHOPEE-PRODUK-4" target="_blank" class="btn-shopee">BELI DI SHOPEE</a>
+‎        </div>
+‎      </div>
+‎
+‎      <div class="prod-card">
+‎        <img src="ISI-LINK-FOTO-PRODUK-5.jpg" alt="Produk 5">
+‎        <div class="prod-body">
+‎          <h3>Nama Produk 5</h3>
+‎          <div class="price">Rp0</div>
+‎          <a href="ISI-LINK-SHOPEE-PRODUK-5" target="_blank" class="btn-shopee">BELI DI SHOPEE</a>
+‎        </div>
+‎      </div>
+‎
+‎      <div class="prod-card">
+‎        <img src="ISI-LINK-FOTO-PRODUK-6.jpg" alt="Produk 6">
+‎        <div class="prod-body">
+‎          <h3>Nama Produk 6</h3>
+‎          <div class="price">Rp0</div>
+‎          <a href="ISI-LINK-SHOPEE-PRODUK-6" target="_blank" class="btn-shopee">BELI DI SHOPEE</a>
+‎        </div>
+‎      </div>
+‎
+‎      <div class="prod-card">
+‎        <img src="ISI-LINK-FOTO-PRODUK-7.jpg" alt="Produk 7">
+‎        <div class="prod-body">
+‎          <h3>Nama Produk 7</h3>
+‎          <div class="price">Rp0</div>
+‎          <a href="ISI-LINK-SHOPEE-PRODUK-7" target="_blank" class="btn-shopee">BELI DI SHOPEE</a>
+‎        </div>
+‎      </div>
+‎
+‎      <div class="prod-card">
+‎        <img src="ISI-LINK-FOTO-PRODUK-8.jpg" alt="Produk 8">
+‎        <div class="prod-body">
+‎          <h3>Nama Produk 8</h3>
+‎          <div class="price">Rp0</div>
+‎          <a href="ISI-LINK-SHOPEE-PRODUK-8" target="_blank" class="btn-shopee">BELI DI SHOPEE</a>
+‎        </div>
+‎      </div>
+‎
+‎      <div class="prod-card">
+‎        <img src="ISI-LINK-FOTO-PRODUK-9.jpg" alt="Produk 9">
+‎        <div class="prod-body">
+‎          <h3>Nama Produk 9</h3>
+‎          <div class="price">Rp0</div>
+‎          <a href="ISI-LINK-SHOPEE-PRODUK-9" target="_blank" class="btn-shopee">BELI DI SHOPEE</a>
+‎        </div>
+‎      </div>
+‎
+‎      <div class="prod-card">
+‎        <img src="ISI-LINK-FOTO-PRODUK-10.jpg" alt="Produk 10">
+‎        <div class="prod-body">
+‎          <h3>Nama Produk 10</h3>
+‎          <div class="price">Rp0</div>
+‎          <a href="ISI-LINK-SHOPEE-PRODUK-10" target="_blank" class="btn-shopee">BELI DI SHOPEE</a>
+‎        </div>
+‎      </div>
+‎      <!-- SELESAI COPY -->
+‎
+‎    </div>
+‎  </section>
+‎
+‎  <!-- VIDEO 4 KOLOM -->
+‎  <section class="container">
+‎    <h2 class="section-title">VIDEO KOLEKSI</h2>
+‎    <div class="grid-video">
+‎      
+‎      <div class="video-card">
+‎        <video controls src="ISI-LINK-VIDEO-1.mp4"></video>
+‎        <a href="ISI-LINK-SHOPEE-VIDEO-1" target="_blank">Lihat di Shopee →</a>
+‎      </div>
+‎
+‎      <div class="video-card">
+‎        <video controls src="ISI-LINK-VIDEO-2.mp4"></video>
+‎        <a href="ISI-LINK-SHOPEE-VIDEO-2" target="_blank">Lihat di Shopee →</a>
+‎      </div>
+‎
+‎      <div class="video-card">
+‎        <video controls src="ISI-LINK-VIDEO-3.mp4"></video>
+‎        <a href="ISI-LINK-SHOPEE-VIDEO-3" target="_blank">Lihat di Shopee →</a>
+‎      </div>
+‎
+‎      <div class="video-card">
+‎        <video controls src="ISI-LINK-VIDEO-4.mp4"></video>
+‎        <a href="ISI-LINK-SHOPEE-VIDEO-4" target="_blank">Lihat di Shopee →</a>
+‎      </div>
+‎
+‎    </div>
+‎  </section>
+‎
+‎  <!-- FOOTER UNIQLO -->
+‎  <footer class="footer">
+‎    <div class="footer-wrap">
+‎      <div>
+‎        <h4>TENTANG KAMI</h4>
+‎        <a href="#">Company</a>
+‎        <a href="#">Store Locator</a>
+‎        <a href="#">Karir</a>
+‎      </div>
+‎      <div>
+‎        <h4>BANTUAN</h4>
+‎        <a href="#">FAQ</a>
+‎        <a href="#">Cara Order</a>
+‎        <a href="#">Retur</a>
+‎      </div>
+‎      <div>
+‎        <h4>KONTAK</h4>
+‎        <a href="https://wa.me/628886224629" target="_blank">WhatsApp: 0888-6224-629</a>
+‎        <a href="#">Majalaya, Bandung</a>
+‎      </div>
+‎      <div>
+‎        <h4>IKUTI KAMI</h4>
+‎        <a href="https://shopee.co.id/ISI-LINK-SHOPEE-UTAMA-KAMU" target="_blank">Shopee Official</a>
+‎        <a href="#">Instagram</a>
+‎      </div>
+‎    </div>
+‎    <div class="footer-bottom">
+‎      <p>© 2026 STARLA BORDIR. All Rights Reserved.</p>
+‎    </div>
+‎  </footer>
+‎
+‎  <!-- TOMBOL WA MELAYANG -->
+‎  <a href="https://wa.me/628886224629" class="wa-float" target="_blank">💬</a>
+‎
+‎</body>
+‎</html>
