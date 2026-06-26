@@ -26,6 +26,24 @@
 ‎  z-index: -1;
 ‎  pointer-events: none;
 ‎}
+  wa-float { 
+‎  position:fixed; 
+‎  width:60px; 
+‎  height:60px; 
+‎  bottom:20px; 
+‎  right:20px; 
+‎  background-color:#25D366; 
+‎  color:#FFF; 
+‎  border-radius:50px; 
+‎  text-align:center; 
+‎  font-size:30px; 
+‎  box-shadow: 2px 2px 3px #999; 
+‎  z-index:100; 
+‎  display:flex;
+‎  align-items:center;
+‎  justify-content:center;
+‎  text-decoration:none;
+‎}
 ‎  ‎.hero-video { position:relative; height:60vh; min-height:400px; overflow:hidden; display:flex; align-items:center; justify-content:center; text-align:center; color:#fff; }
 ‎.hero-video video { position:absolute; top:50%; left:50%; min-width:100%; min-height:100%; transform:translate(-50%,-50%); z-index:-2; object-fit:cover; }
 ‎.hero-overlay { position:absolute; inset:0; background:rgba(0,0,0,0.5); z-index:-1; } /* Item transparan biar teks kebaca */
@@ -263,8 +281,12 @@
 ‎    </div>
 ‎  </footer>
 ‎
-‎  <!-- TOMBOL WA MELAYANG -->
-‎  <a href="https://wa.me/628886224629" class="wa-float" target="_blank">💬</a>
-‎
+‎  ‎<!-- TOMBOL WA MELAYANG SVG -->
+‎<a href="https://wa.me/628886224629" class="wa-float" target="_blank" aria-label="Chat WhatsApp">
+‎  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="32" height="32" fill="#fff">
+‎    <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.7-184.4 184.6-184.4 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54 32.6-54 32.6s-14.1-38.3-17.9-51.4c-3.7-13.1-7.4-11.4-12.5-12-5.1-.6-11-1.2-16.9-1.2s-15.4 2.3-23.4 11.4c-8 9.2-30.5 29.8-30.5 72.6s31.2 84.3 35.6 90.1c4.4 5.8 61.5 94 149 132.1 20.5 8.9 36.5 14.2 49 18.2 20.6 6.5 39.4 5.6 54.2 3.4 16.5-2.5 50.8-20.8 58-40.9 7.2-20.1 7.2-37.3 5-40.9-2.2-3.6-8-5.8-16.8-10.1z"/>
+‎  </svg>
+‎</a>
+  
 ‎</body>
 ‎</html>
