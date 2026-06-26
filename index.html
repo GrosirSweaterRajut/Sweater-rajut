@@ -44,13 +44,14 @@
 ‎  justify-content:center;
 ‎  text-decoration:none;
 ‎}
-‎  ‎.hero-video { position:relative; height:60vh; min-height:400px; overflow:hidden; display:flex; align-items:center; justify-content:center; text-align:center; color:#fff; }
-‎.hero-video video { position:absolute; top:50%; left:50%; min-width:100%; min-height:100%; transform:translate(-50%,-50%); z-index:-2; object-fit:cover; }
-‎.hero-overlay { position:absolute; inset:0; background:rgba(0,0,0,0.5); z-index:-1; } /* Item transparan biar teks kebaca */
-‎.hero-content { position:relative; z-index:1; padding:20px; }
-‎.hero-content h1 { font-size:40px; font-weight:700; margin-bottom:12px; }
-‎.hero-content p { font-size:16px; max-width:600px; margin:auto; opacity: 0.9; }
-‎body {
+‎.hero-video{position:relative;height:60vh;min-height:400px;width:100%;overflow:hidden}
+‎.hero-video video{position:absolute;top:50%;left:50%;min-width:100%;min-height:100%;width:auto;height:auto;transform:translate(-50%,-50%);object-fit:cover}
+‎.hero-overlay{position:absolute;inset:0;background:rgba(0,0,0,.45)}
+‎.hero-content{position:relative;z-index:1;padding:20px;text-align:center;color:#fff}
+‎.hero-content h1{font-size:40px;font-weight:700;margin-bottom:10px}
+‎.hero-content p{font-size:16px;max-width:600px;margin:auto;opacity:.9}-content p { font-size:16px; max-width:600px; margin:auto; opacity: 0.9; }
+
+  ‎body {
 ‎
 ‎    /* NAVBAR STYLE UNIQLO */
 ‎    .nav { background:#fff; border-bottom:1px solid var(--line); padding:16px 20px; position:sticky; top:0; z-index:9999; }
