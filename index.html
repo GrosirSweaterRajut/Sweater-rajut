@@ -1,58 +1,231 @@
-‎<!DOCTYPE html>
-‎<html lang="id">
-‎<head>
-‎<meta charset="UTF-8">
-‎<meta name="viewport" content="width=device-width, initial-scale=1.0">
-‎<title>Grosir Sweater Rajut Majalaya</title>
-‎<style>
-‎body{margin:0;font-family:Arial,sans-serif;background:#fff;color:#111}
-‎.nav{position:sticky;top:0;background:#fff;border-bottom:1px solid #eee;padding:12px 16px;display:flex;justify-content:space-between;align-items:center;font-weight:700}
-‎.btn-shopee-nav{background:#EE4D2D;color:#fff;text-decoration:none;font-size:12px;font-weight:700;padding:8px 12px;border-radius:6px}
-‎.hero{background:#000;color:#fff;text-align:center;padding:60px 16px}
-‎.hero h1{font-size:32px;margin:0 0 8px}
-‎.wrap{max-width:1000px;margin:24px auto;padding:0 16px}
-‎.grid-prod{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-‎.card-prod{border:1px solid #eee;border-radius:8px;padding:12px;text-align:center}
-‎.card-prod img{width:100%;height:220px;object-fit:cover;border-radius:6px}
-‎.card-prod h3{font-size:14px;margin:8px 0 4px}
-‎.price{font-weight:700;margin-bottom:8px}
-‎.btn-shopee{display:inline-block;background:#EE4D2D;color:#fff;text-decoration:none;font-size:12px;font-weight:600;padding:8px 14px;border-radius:6px}
-‎.btn-shopee:hover{background:#D73211}
-‎@media(max-width:600px){.grid-prod{grid-template-columns:1fr}}
-‎</style>
-‎</head>
-‎<body>
-‎
-‎<nav class="nav">
-‎  <div>GROSIR SWEATER RAJUT</div>
-‎  <a href="https://shopee.co.id/malik_x_denzi" target="_blank" class="btn-shopee-nav">OFFICIAL SHOPEE</a>
-‎</nav>
-‎
-‎<section class="hero">
-‎  <h1>Grosir Sweater Rajut</h1>
-‎  <p>Kualitas Ekspor Langsung dari Majalaya</p>
-‎</section>
-‎
-‎<main class="wrap">
-‎  <h2>KOLEKSI TERBARU</h2>
-‎  <div class="grid-prod">
-‎    
-‎    <div class="card-prod">
-‎      <img src="https://down-id.img.susercontent.com/file/sg-11134201-7rftw-m8w3x8yqz8x123" alt="Starla Bordir">
-‎      <h3>STARLA BORDIR</h3>
-‎      <div class="price">Rp125.000</div>
-‎      <a href="https://shopee.co.id/malik_x_denzi" target="_blank" class="btn-shopee">BELI DI SHOPEE</a>
-‎    </div>
-‎
-‎    <div class="card-prod">
-‎      <img src="https://down-id.img.susercontent.com/file/sg-11134201-7r98o-m8w3x8yqz8x456" alt="Tanktop Stripe">
-‎      <h3>TANKTOP STRIPE</h3>
-‎      <div class="price">Rp85.000</div>
-‎      <a href="https://shopee.co.id/malik_x_denzi" target="_blank" class="btn-shopee">BELI DI SHOPEE</a>
-‎    </div>
-‎
-‎  </div>
-‎</main>
-‎
-‎</body>
-‎</html>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grosir sweater rajut | Official Store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Helvetica:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg:#ffffff; --text:#111; --muted:#666; --line:#e5e5e5; --accent:#FF5722; --wa:#25D366; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior: smooth; }
+    body { 
+      font-family:'Helvetica', Arial, sans-serif; 
+      background:var(--bg); 
+      color:var(--text);
+    }
+    
+    /* BACKGROUND GAMBAR TRANSPARAN */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-image: url('https://i.imgur.com/tKT6RLA.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      opacity: 0.08; 
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    /* NAVBAR STYLE UNIQLO */
+    .nav { background:#fff; border-bottom:1px solid var(--line); padding:16px 20px; position:sticky; top:0; z-index:9999; }
+    .nav-wrap { max-width:1200px; margin:auto; display:flex; justify-content:space-between; align-items:center; }
+    .logo { font-size:20px; font-weight:700; letter-spacing:1px; }
+    .nav-btn { background:#000; color:#fff; padding:8px 16px; border-radius:4px; text-decoration:none; font-size:13px; font-weight:700; }
+    
+    .hero-video{position:relative;height:60vh;min-height:400px;width:100%;overflow:hidden}
+    .hero-video video{position:absolute;top:50%;left:50%;min-width:100%;min-height:100%;width:auto;height:auto;transform:translate(-50%,-50%);object-fit:cover}
+    .hero-overlay{position:absolute;inset:0;background:rgba(0,0,0,.45)}
+    .hero-content{position:relative;z-index:1;padding:20px;text-align:center;color:#fff;display:flex;flex-direction:column;justify-content:center;height:100%}
+    .hero-content h1{font-size:40px;font-weight:700;margin-bottom:10px}
+    .hero-content p{font-size:16px;max-width:600px;margin:auto;opacity:.9}
+    
+    .container{max-width:1200px;margin:60px auto;padding:0 20px}
+    .section-title{text-align:center;font-size:24px;font-weight:700;margin-bottom:30px;letter-spacing:1px}
+
+    /* GRID PRODUK 10 FOTO */
+    .grid-prod { display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:20px; }
+    .prod-card { background:#fff; border:1px solid var(--line); transition:0.3s; }
+    .prod-card:hover { box-shadow:0 4px 16px rgba(0,0,0,0.08); }
+    .prod-card img { width:100%; height:280px; object-fit:cover; display:block; }
+    .prod-body { padding:16px; }
+    .prod-body h3 { font-size:14px; font-weight:400; margin-bottom:6px; height:36px; overflow:hidden; }
+    .prod-body .price { font-size:14px; font-weight:700; margin-bottom:12px; }
+    .btn-shopee { display:block; width:100%; background:var(--accent); color:#fff; text-align:center; padding:10px; border-radius:4px; text-decoration:none; font-size:13px; font-weight:700; transition:0.2s; }
+    .btn-shopee:hover { background:#D73211; }
+
+    /* FOOTER STYLE UNIQLO */
+    .footer { background:#f5f5f5; border-top:1px solid var(--line); padding:40px 20px; margin-top:60px; font-size:13px; color:var(--muted); }
+    .footer-wrap { max-width:1200px; margin:auto; display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:30px; }
+    .footer h4 { font-size:14px; color:#000; margin-bottom:12px; font-weight:700; }
+    .footer a { display:block; color:var(--muted); text-decoration:none; margin-bottom:8px; }
+    .footer-bottom { text-align:center; padding-top:30px; border-top:1px solid var(--line); margin-top:30px; }
+
+    /* TOMBOL WA MELAYANG */
+    .wa-float { position:fixed; bottom:20px; right:20px; background:var(--wa); color:#fff; width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:30px; text-decoration:none; box-shadow:0 4px 16px rgba(0,0,0,0.2); z-index:999; }
+
+    @media(max-width:600px){ 
+      .hero-content h1{font-size:28px;} 
+      .grid-prod{grid-template-columns:1fr 1fr;} 
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="nav">
+    <div class="nav-wrap">
+      <div class="logo">GROSIR SWEATER RAJUT</div>
+      <a href="https://shopee.co.id/malik_x_denzi" target="_blank" class="nav-btn">OFFICIAL SHOPEE</a>
+    </div>
+  </nav>
+
+  <!-- HERO VIDEO HEADER -->
+  <section class="hero-video">
+    <video autoplay muted loop playsinline>
+      <source src="starlabordir.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>STARLA BORDIR</h1>
+      <p>Spesialis Grosir Sweater Rajut & Cardigan Kualitas Ekspor dari Majalaya, Bandung.</p>
+    </div>
+  </section>
+
+  <!-- KATALOG 10 PRODUK -->
+  <section class="container">
+    <h2 class="section-title">KOLEKSI TERBARU</h2>
+    <div class="grid-prod">
+      
+      <div class="prod-card">
+        <img src="https://down-id.img.susercontent.com/file/sg-11134201-7rftw-m8w3x8yqz8x123" alt="Starla Bordir">
+        <div class="prod-body">
+          <h3>Starla Bordir Rajut Premium</h3>
+          <div class="price">Rp125.000</div>
+          <a href="https://shopee.co.id/malik_x_denzi" target="_blank" class="btn-shopee">BELI DI SHOPEE</a>
+        </div>
+      </div>
+
+      <div class="prod-card">
+        <img src="https://down-id.img.susercontent.com/file/sg-11134201-7r98o-m8w3x8yqz8x456" alt="Tanktop Stripe">
+        <div class="prod-body">
+          <h3>Tanktop Stripe Rajut Knit</h3>
+          <div class="price">Rp85.000</div>
+          <a href="https://shopee.co.id/malik_x_denzi" target="_blank" class="btn-shopee">BELI DI SHOPEE</a>
+        </div>
+      </div>
+
+      <div class="prod-card">
+        <img src="https://down-id.img.susercontent.com/file/id-11134207-7rasg-m7w3x8yqz8x789" alt="Cardigan Outer">
+        <div class="prod-body">
+          <h3>Cardigan Outer Rajut Tebal</h3>
+          <div class="price">Rp150.000</div>
+          <a href="https://shopee.co.id/malik_x_denzi" target="_blank" class="btn-shopee">BELI DI SHOPEE</a>
+        </div>
+      </div>
+
+      <div class="prod-card">
+        <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98o-m7w3x8yqz8x012" alt="Sweater Polos">
+        <div class="prod-body">
+          <h3>Sweater Rajut Polos Oversize</h3>
+          <div class="price">Rp110.000</div>
+          <a href="https://shopee.co.id/malik_x_denzi" target="_blank" class="btn-shopee">BELI DI SHOPEE</a>
+        </div>
+      </div>
+
+      <div class="prod-card">
+        <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98o-m7w3x8yqz8x345" alt="Rompi Cable">
+        <div class="prod-body">
+          <h3>Rompi Cable/Kepang Rajut</h3>
+          <div class="price">Rp95.000</div>
+          <a href="https://shopee.co.id/malik_x_denzi" target="_blank" class="btn-shopee">BELI DI SHOPEE</a>
+        </div>
+      </div>
+
+      <div class="prod-card">
+        <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98o-m7w3x8yqz8x678" alt="Knit Top">
+        <div class="prod-body">
+          <h3>Knit Top Lengan Pendek</h3>
+          <div class="price">Rp90.000</div>
+          <a href="https://shopee.co.id/malik_x_denzi" target="_blank" class="btn-shopee">BELI DI SHOPEE</a>
+        </div>
+      </div>
+
+      <div class="prod-card">
+        <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98o-m7w3x8yqz8x901" alt="Sweater Crop">
+        <div class="prod-body">
+          <h3>Sweater Crop Rajut Boxy</h3>
+          <div class="price">Rp105.000</div>
+          <a href="https://shopee.co.id/malik_x_denzi" target="_blank" class="btn-shopee">BELI DI SHOPEE</a>
+        </div>
+      </div>
+
+      <div class="prod-card">
+        <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98o-m7w3x8yqz8x234" alt="Cardigan Panjang">
+        <div class="prod-body">
+          <h3>Cardigan Panjang Rajut Kimono</h3>
+          <div class="price">Rp165.000</div>
+          <a href="https://shopee.co.id/malik_x_denzi" target="_blank" class="btn-shopee">BELI DI SHOPEE</a>
+        </div>
+      </div>
+
+      <div class="prod-card">
+        <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98o-m7w3x8yqz8x567" alt="Sweater Motif">
+        <div class="prod-body">
+          <h3>Sweater Rajut Motif Argyle</h3>
+          <div class="price">Rp120.000</div>
+          <a href="https://shopee.co.id/malik_x_denzi" target="_blank" class="btn-shopee">BELI DI SHOPEE</a>
+        </div>
+      </div>
+
+      <div class="prod-card">
+        <img src="https://down-id.img.susercontent.com/file/id-11134207-7r98o-m7w3x8yqz8x890" alt="Vest Rajut">
+        <div class="prod-body">
+          <h3>Vest Rajut Sleeveless Unik</h3>
+          <div class="price">Rp88.000</div>
+          <a href="https://shopee.co.id/malik_x_denzi" target="_blank" class="btn-shopee">BELI DI SHOPEE</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-wrap">
+      <div>
+        <h4>TENTANG KAMI</h4>
+        <a href="#">Profil Toko</a>
+        <a href="#">Lokasi Majalaya</a>
+      </div>
+      <div>
+        <h4>BANTUAN</h4>
+        <a href="#">Cara Order Grosir</a>
+        <a href="#">FAQ</a>
+      </div>
+      <div>
+        <h4>KONTAK</h4>
+        <a href="https://wa.me/628886224629" target="_blank">WhatsApp: 08886224629</a>
+        <a href="https://shopee.co.id/malik_x_denzi" target="_blank">Shopee: malik_x_denzi</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2026 Grosir Sweater Rajut Majalaya. All Rights Reserved.
+    </div>
+  </footer>
+
+  <!-- TOMBOL WA MELAYANG SVG -->
+  <a href="https://wa.me/628886224629" class="wa-float" target="_blank" aria-label="Chat WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="32" height="32" fill="#fff">
+      <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.7-184.4 184.6-184.4 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54 32.6-54 32.6s-14.1-38.3-17.9-51.4c-3.7-13.1-7.4-11.4-12.5-12-5.1-.6-11-1.2-16.9-1.2s-15.4 2.3-23.4 11.4c-8 9.2-30.5 29.8-30.5 72.6s31.2 84.3 35.6 90.1c4.4 5.8 61.5 94 149 132.1 20.5 8.9 36.5 14.2 49 18.2 20.6 6.5 39.4 5.6 54.2 3.4 16.5-2.5 50.8-20.8 58-40.9 7.2-20.1 7.2-37.3 5-40.9-2.2-3.6-8-5.8-16.8-10.1z"/>
+    </svg>
+  </a>
+  
+</body>
+</html>
+---
+
