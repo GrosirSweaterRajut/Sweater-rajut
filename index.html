@@ -26,7 +26,12 @@
 ‎  z-index: -1;
 ‎  pointer-events: none;
 ‎}
-‎
+‎  ‎.hero-video { position:relative; height:60vh; min-height:400px; overflow:hidden; display:flex; align-items:center; justify-content:center; text-align:center; color:#fff; }
+‎.hero-video video { position:absolute; top:50%; left:50%; min-width:100%; min-height:100%; transform:translate(-50%,-50%); z-index:-2; object-fit:cover; }
+‎.hero-overlay { position:absolute; inset:0; background:rgba(0,0,0,0.5); z-index:-1; } /* Item transparan biar teks kebaca */
+‎.hero-content { position:relative; z-index:1; padding:20px; }
+‎.hero-content h1 { font-size:40px; font-weight:700; margin-bottom:12px; }
+‎.hero-content p { font-size:16px; max-width:600px; margin:auto; opacity: 0.9; }
 ‎body {
 ‎
 ‎    /* NAVBAR STYLE UNIQLO */
