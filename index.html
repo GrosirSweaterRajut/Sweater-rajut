@@ -5,6 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Grosir Sweater Rajut | Majalaya Official</title>
   <meta name="description" content="Supplier Grosir Sweater Rajut & Cardigan Kualitas Ekspor. Langsung dari Produsen Tangan Pertama.">
+  <meta property="og:title" content="Grosir Sweater Rajut | Majalaya Official" />
+  <meta property="og:description" content="Supplier Grosir Sweater Rajut & Cardigan Kualitas Ekspor." />
+  <meta property="og:image" content="https://i.imgur.com/tKT6RLA.jpeg" />
+  
+  <!-- GA4 START -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XD8RMGB6QX"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XD8RMGB6QX');
+  </script>
+  <!-- GA4 END -->
+
   <style>
     :root { 
       --card:#fff; --text:#1A1A1A; --muted:#6C757D; --line:#DEE2E6; 
@@ -14,18 +28,11 @@
     html { scroll-behavior: smooth; }
     body { 
       font-family:'Inter', 'Segoe UI', Arial, sans-serif; 
-      background:transparent; /* <-- PENTING: Ga ada warna */
+      background: url('hero-bg.jpg') center/cover fixed no-repeat;
       color:var(--text); 
       line-height:1.6; 
     }
-
-    /* Background utama = Foto Hero doang */
-    body {
-      background: url('hero-bg.jpg') center/cover fixed no-repeat; /* <-- FOTO BACKGROUND SATU-SATUNYA */
-    }
-
     .container{max-width:1200px;margin:auto;padding:0 24px}
-
     .nav { 
       background:rgba(255,255,255,0.8); backdrop-filter:blur(10px); 
       border-bottom:1px solid var(--line); padding:16px 0; position:sticky; top:0; z-index:999; 
@@ -37,13 +44,12 @@
       text-decoration:none; font-size:13px; font-weight:600; transition:0.2s;
     }
     .nav-btn:hover { transform:translateY(-2px); box-shadow:var(--shadow); }
-
     .hero-video{
       position:relative;
       height:100svh;
       width:100%;
       overflow:hidden;
-      background:transparent; /* <-- Dibikin transparan biar foto body keliatan */
+      background:transparent;
     }
     .hero-video video{
       position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;
@@ -57,15 +63,13 @@
     .hero-content h1{font-size:48px;font-weight:800;margin-bottom:16px;letter-spacing:-1px;text-shadow:0 2px 10px rgba(0,0,0,.5)}
     .hero-content p{font-size:18px;max-width:640px;margin:auto;opacity:.95;text-shadow:0 2px 10px rgba(0,0,0,.5)}
     @keyframes fadeInUp{from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)}}
-
     .section{
       padding:80px 0;
-      background:rgba(255,255,255,0.9); /* <-- Dibikin transparan 90% biar foto belakang tembus tipis */
-      backdrop-filter:blur(4px); /* <-- Efek kaca biar estetik */
+      background:rgba(255,255,255,0.9);
+      backdrop-filter:blur(4px);
     }
     .section-title{text-align:center;font-size:32px;font-weight:800;margin-bottom:12px;letter-spacing:-0.5px}
     .section-sub{text-align:center;color:var(--muted);margin-bottom:40px;max-width:600px;margin-left:auto;margin-right:auto}
-
     .grid-prod { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:24px; }
     .prod-card { 
       background:var(--card); border:1px solid var(--line); border-radius:12px; 
@@ -82,19 +86,16 @@
       transition:0.2s;
     }
     .btn-shopee:hover { background:var(--accent); }
-
     .grid-video { display:grid; grid-template-columns: repeat(4, 1fr); gap:20px; }
     .video-card video { width:100%; border-radius:12px; display:block; aspect-ratio:9/16; object-fit:cover; box-shadow:var(--shadow); }
     .video-card a { display:block; margin-top:12px; font-size:14px; text-decoration:none; color:var(--text); font-weight:600; text-align:center; }
     .video-card a:hover { color:var(--accent); }
-
     .footer { background:#000; color:#AAA; padding:60px 0 20px; margin-top:80px; font-size:14px; }
     .footer-wrap { display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:40px; }
     .footer h4 { font-size:15px; color:#FFF; margin-bottom:16px; font-weight:700; }
     .footer a { display:block; color:#AAA; text-decoration:none; margin-bottom:10px; transition:0.2s; }
     .footer a:hover { color:#FFF; }
     .footer-bottom { text-align:center; padding-top:30px; border-top:1px solid #222; margin-top:40px; font-size:13px; }
-
     .shopee-float { 
       position:fixed; bottom:24px; right:24px; background:var(--shopee); color:#fff; 
       width:64px; height:64px; border-radius:50%; display:flex; align-items:center; 
@@ -102,7 +103,6 @@
       z-index:999; transition:0.2s;
     }
     .shopee-float:hover { transform:scale(1.1); }
-
     @media(max-width:900px){ .grid-video{grid-template-columns:repeat(2, 1fr);} }
     @media(max-width:600px){ 
       .hero-content h1{font-size:32px;} 
@@ -142,7 +142,7 @@
           <div class="prod-body">
             <h3>Tanktop stripe</h3>
             <div class="price">Rp33.000</div>
-            <a href="https://shopee.co.id/malik_x_denzi" target="_blank" class="btn-shopee">LIHAT DI SHOPEE</a>
+            <a href="https://shopee.co.id/malik_x_denzi" target="_blank" rel="nofollow noopener" class="btn-shopee">LIHAT DI SHOPEE</a>
           </div>
         </div>
 
@@ -151,7 +151,7 @@
           <div class="prod-body">
             <h3>Outer abel crop</h3>
             <div class="price">Rp44.000</div>
-            <a href="https://shopee.co.id/malik_x_denzi" target="_blank" class="btn-shopee">LIHAT DI SHOPEE</a>
+            <a href="https://shopee.co.id/malik_x_denzi" target="_blank" rel="nofollow noopener" class="btn-shopee">LIHAT DI SHOPEE</a>
           </div>
         </div>
 
@@ -160,7 +160,7 @@
           <div class="prod-body">
             <h3>yura vest</h3>
             <div class="price">Rp33.000</div>
-            <a href="https://shopee.co.id/malik_x_denzi" target="_blank" class="btn-shopee">LIHAT DI SHOPEE</a>
+            <a href="https://shopee.co.id/malik_x_denzi" target="_blank" rel="nofollow noopener" class="btn-shopee">LIHAT DI SHOPEE</a>
           </div>
         </div>
 
@@ -169,69 +169,63 @@
           <div class="prod-body">
             <h3>knitt top kriwil</h3>
             <div class="price">Rp28.000</div>
-            <a href="https://shopee.co.id/malik_x_denzi" target="_blank" class="btn-shopee">LIHAT DI SHOPEE</a>
+            <a href="https://shopee.co.id/malik_x_denzi" target="_blank" rel="nofollow noopener" class="btn-shopee">LIHAT DI SHOPEE</a>
           </div>
         </div>
 
-<!-- PRODUK BARU 1 -->
-<div class="prod-card">
-  <img src="https://i.ibb.co.com/WvP12ygH/Screenshot-20260626-213414.png" alt="TANKTOP STRIPE /ATASAN RAJUT TANPA TANGAN" loading="lazy">
-  <div class="prod-body">
-    <h3>TANKTOP STRIPE /ATASAN RAJUT TANPA TANGAN</h3>
-    <div class="price">Rp29.900</div>
-    <a href="https://s.shopee.co.id/4AxzOLxagQ" target="_blank" class="btn-shopee">LIHAT DI SHOPEE</a>
-  </div>
-</div>
+        <div class="prod-card">
+          <img src="https://i.ibb.co.com/WvP12ygH/Screenshot-20260626-213414.png" alt="TANKTOP STRIPE /ATASAN RAJUT TANPA TANGAN" loading="lazy">
+          <div class="prod-body">
+            <h3>TANKTOP STRIPE /ATASAN RAJUT TANPA TANGAN</h3>
+            <div class="price">Rp29.900</div>
+            <a href="https://s.shopee.co.id/4AxzOLxagQ" target="_blank" rel="nofollow noopener" class="btn-shopee">LIHAT DI SHOPEE</a>
+          </div>
+        </div>
 
-<!-- PRODUK BARU 2 -->
-<div class="prod-card">
-  <img src="https://i.ibb.co.com/ycB1dDzy/Screenshot-20260624-141042.png" alt="TARLA CARDIGAN BASIC" loading="lazy">
-  <div class="prod-body">
-    <h3>TARLA CARDIGAN BASIC</h3>
-    <div class="price">Rp48.500</div>
-    <a href="https://s.shopee.co.id/8KnYM8ZLCW" target="_blank" class="btn-shopee">LIHAT DI SHOPEE</a>
-  </div>
-</div>
+        <div class="prod-card">
+          <img src="https://i.ibb.co.com/ycB1dDzy/Screenshot-20260624-141042.png" alt="TARLA CARDIGAN BASIC" loading="lazy">
+          <div class="prod-body">
+            <h3>TARLA CARDIGAN BASIC</h3>
+            <div class="price">Rp48.500</div>
+            <a href="https://s.shopee.co.id/8KnYM8ZLCW" target="_blank" rel="nofollow noopener" class="btn-shopee">LIHAT DI SHOPEE</a>
+          </div>
+        </div>
 
-<!-- PRODUK BARU 3 -->
-<div class="prod-card">
-  <img src="https://i.ibb.co.com/QjvF3tvf/Screenshot-20260622-193511.png" alt="CARDIGAN JOLY BOLERO" loading="lazy">
-  <div class="prod-body">
-    <h3>CARDIGAN JOLY BOLERO</h3>
-    <div class="price">Rp46.000</div>
-    <a href="https://s.shopee.co.id/6VLuAxbTO3" target="_blank" class="btn-shopee">LIHAT DI SHOPEE</a>
-  </div>
-</div>
+        <div class="prod-card">
+          <img src="https://i.ibb.co.com/QjvF3tvf/Screenshot-20260622-193511.png" alt="CARDIGAN JOLY BOLERO" loading="lazy">
+          <div class="prod-body">
+            <h3>CARDIGAN JOLY BOLERO</h3>
+            <div class="price">Rp46.000</div>
+            <a href="https://s.shopee.co.id/6VLuAxbTO3" target="_blank" rel="nofollow noopener" class="btn-shopee">LIHAT DI SHOPEE</a>
+          </div>
+        </div>
 
-<!-- PRODUK BARU 4 -->
-<div class="prod-card">
-  <img src="https://i.ibb.co.com/VcDwMddP/ciazzsg-11134249-824iq-mpf6l5yqzjlsce.png" alt="BLOUSE RAJUT OLOP BORDIR" loading="lazy">
-  <div class="prod-body">
-    <h3>BLOUSE RAJUT OLOP BORDIR</h3>
-    <div class="price">Rp37.500</div>
-    <a href="https://s.shopee.co.id/1gGePJmK4i" target="_blank" class="btn-shopee">LIHAT DI SHOPEE</a>
-  </div>
-</div>
+        <div class="prod-card">
+          <img src="https://i.ibb.co.com/VcDwMddP/ciazzsg-11134249-824iq-mpf6l5yqzjlsce.png" alt="BLOUSE RAJUT OLOP BORDIR" loading="lazy">
+          <div class="prod-body">
+            <h3>BLOUSE RAJUT OLOP BORDIR</h3>
+            <div class="price">Rp37.500</div>
+            <a href="https://s.shopee.co.id/1gGePJmK4i" target="_blank" rel="nofollow noopener" class="btn-shopee">LIHAT DI SHOPEE</a>
+          </div>
+        </div>
 
-<!-- PRODUK BARU 5 -->
-<div class="prod-card">
-  <img src="https://i.ibb.co.com/qF5MT1bV/images-1.jpg" alt="SWEATER RAJUT POLKA LOVE" loading="lazy">
-  <div class="prod-body">
-    <h3>SWEATER RAJUT POLKA LOVE</h3>
-    <div class="price">Rp59.500</div>
-    <a href="https://s.shopee.co.id/2qSbnc4v38" target="_blank" class="btn-shopee">LIHAT DI SHOPEE</a>
-  </div>
-</div>
+        <div class="prod-card">
+          <img src="https://i.ibb.co.com/qF5MT1bV/images-1.jpg" alt="SWEATER RAJUT POLKA LOVE" loading="lazy">
+          <div class="prod-body">
+            <h3>SWEATER RAJUT POLKA LOVE</h3>
+            <div class="price">Rp59.500</div>
+            <a href="https://s.shopee.co.id/2qSbnc4v38" target="_blank" rel="nofollow noopener" class="btn-shopee">LIHAT DI SHOPEE</a>
+          </div>
+        </div>
 
-<!-- PRODUK BARU 6 -->
-<div class="prod-card">
-  <img src="https://i.ibb.co.com/KjpCHHJm/download.webp" alt="CALLA SWEATER/ ATASAN RAJUT ZIPPER BAWAH" loading="lazy">
-  <div class="prod-body">
-    <h3>CALLA SWEATER/ ATASAN RAJUT ZIPPER BAWAH</h3>
-    <div class="price">Rp37.000</div>
-    <a href="https://s.shopee.co.id/3B5SCJJR4F" target="_blank" class="btn-shopee">LIHAT DI SHOPEE</a>
-  </div>
-</div>
+        <div class="prod-card">
+          <img src="https://i.ibb.co.com/KjpCHHJm/download.webp" alt="CALLA SWEATER/ ATASAN RAJUT ZIPPER BAWAH" loading="lazy">
+          <div class="prod-body">
+            <h3>CALLA SWEATER/ ATASAN RAJUT ZIPPER BAWAH</h3>
+            <div class="price">Rp37.000</div>
+            <a href="https://s.shopee.co.id/3B5SCJJR4F" target="_blank" rel="nofollow noopener" class="btn-shopee">LIHAT DI SHOPEE</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -290,6 +284,16 @@
       <path d="M17 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
     </svg>
   </a>
+
+  <!-- SENSOR KLIK GA4 -->
+  <script>
+    document.querySelectorAll('.btn-shopee').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const productName = this.closest('.prod-card').querySelector('h3').textContent;
+        gtag('event', 'click_shopee', { 'product_name': productName });
+      });
+    });
+  </script>
 
 </body>
 </html>
