@@ -8,7 +8,7 @@
   <meta property="og:title" content="Grosir Sweater Rajut | GROSIR BAJU RAJUT Official" />
   <meta property="og:description" content="Supplier Grosir Sweater Rajut & Cardigan Kualitas Ekspor." />
   <meta property="og:image" content="https://i.imgur.com/tKT6RLA.jpeg" />
-  
+
   <!-- GA4 START -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XD8RMGB6QX"></script>
   <script>
@@ -86,8 +86,8 @@
       transition:0.2s;
     }
     .btn-shopee:hover { background:var(--accent); }
-    .grid-video { display:grid; grid-template-columns: repeat(4, 1fr); gap:20px; }
-    .video-card video { width:100%; border-radius:12px; display:block; aspect-ratio:9/16; object-fit:cover; box-shadow:var(--shadow); }
+    .grid-video { display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:20px; }
+    .video-card video { width:100%; border-radius:12px; display:block; aspect-ratio:9/16; object-fit:cover; box-shadow:var(--shadow); background:#000; }
     .video-card a { display:block; margin-top:12px; font-size:14px; text-decoration:none; color:var(--text); font-weight:600; text-align:center; }
     .video-card a:hover { color:var(--accent); }
     .footer { background:#000; color:#AAA; padding:60px 0 20px; margin-top:80px; font-size:14px; }
@@ -103,7 +103,25 @@
       z-index:999; transition:0.2s;
     }
     .shopee-float:hover { transform:scale(1.1); }
-    @media(max-width:900px){ .grid-video{grid-template-columns:repeat(2, 1fr);} }
+    
+    /* INI CSS BARU BUAT TEKS ORDER */
+    .order-cta{
+      text-align:center;
+      margin-bottom:24px;
+      padding:12px 16px;
+      background:rgba(0,0,0,0.7);
+      color:#fff;
+      border-radius:10px;
+      font-weight:800;
+      font-size:16px;
+      letter-spacing:0.5px;
+      animation:pulse 2s infinite;
+    }
+    @keyframes pulse{
+      0%, 100%{ transform:scale(1); }
+      50%{ transform:scale(1.03); }
+    }
+
     @media(max-width:600px){ 
       .hero-content h1{font-size:32px;} 
       .grid-prod{grid-template-columns:1fr 1fr;} 
@@ -234,35 +252,54 @@
     <div class="container">
       <h2 class="section-title">VIDEO KOLEKSI</h2>
       <p class="section-sub">Lihat detail bahan & produk rajutnya langsung</p>
+      
+      <!-- INI TEKS BARU "ORDER DI SINI" -->
+      <div class="order-cta">
+        ORDER DI SINI 👇 CEK LINK DI BAWAH VIDEO
+      </div>
+
       <div class="grid-video">
+        <!-- 1. JOY BOLERO BARU -->
         <div class="video-card">
           <video controls playsinline muted loop>
-                   <div class="video-card">
-          <video controls playsinline muted loop>
-  <source src="bolero.mp4" type="video/mp4">
+            <source src="bolero.mp4" type="video/mp4">
             Browser kamu tidak support video.
           </video>
-          <a href="https://shopee.co.id/malik_x_denzi" target="_blank">Joy Bolero</a>
+          <a href="https://s.shopee.co.id/6VLuAxbTO3" target="_blank">Joy Bolero</a>
         </div>
+        
+        <!-- 2. ROMPI FLOWERS -->
+        <div class="video-card">
+          <video controls playsinline muted loop>
             <source src="rompiflowers.mp4" type="video/mp4">
+            Browser kamu tidak support video.
           </video>
           <a href="https://shopee.co.id/malik_x_denzi" target="_blank">Rompi Flowers</a>
         </div>
+
+        <!-- 3. ELINA KNIT -->
         <div class="video-card">
           <video controls playsinline muted loop>
             <source src="elina.mp4" type="video/mp4">
+            Browser kamu tidak support video.
           </video>
           <a href="https://shopee.co.id/malik_x_denzi" target="_blank">Elina Knit</a>
         </div>
+
+        <!-- 4. CALLA CARDY -->
         <div class="video-card">
           <video controls playsinline muted loop>
             <source src="calla.mp4" type="video/mp4">
+            Browser kamu tidak support video.
           </video>
           <a href="https://shopee.co.id/malik_x_denzi" target="_blank">Calla Cardy</a>
         </div>
+
+        <!-- 5. PROSES PRODUKSI -->
         <div class="video-card">
           <video controls playsinline muted loop>
             <source src="produksi.mp4" type="video/mp4">
+            Browser kamu tidak support video.
           </video>
           <a href="https://shopee.co.id/malik_x_denzi" target="_blank">Proses Produksi</a>
         </div>
